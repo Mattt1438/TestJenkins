@@ -1,16 +1,18 @@
 node {
-    stage('Build') {
-        echo 'Building....'
-
+    stage('Checkout') {
+        echo 'Checkout'
         checkout scm
     }
-    stage('Test') {
+    stage('Secrets injection') {
+        echo 'Secrets injection....'
+    }
+    stage('Build') {
+        echo 'Building....'
+    }
+    stage('Tests') {
         echo 'Testing....'
-    }
+    } 
     stage('Deploy') {
         echo 'Deploying....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
-    }
+    } 
 }
