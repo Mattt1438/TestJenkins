@@ -1,6 +1,6 @@
 node {
     stage('Checkout') {
-        echo 'Checkout'
+        echo 'Checkout.....'
         checkout scm
     }
     stage('Secrets injection') {
